@@ -1,0 +1,68 @@
+.grid {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0;
+  &__item {
+    cursor: pointer;
+    transition: box-shadow $animationTime;
+    &:hover {
+      box-shadow: 0px 1px 1px 0px #0000001f, 0px 4px 4px 0px #0000000f,
+        0px 1px 1px 0px #0000001f;
+    }
+    &:hover .grid__image-overlay,
+    &:focus .grid__image-overlay {
+      transform: translateY(0);
+    }
+  }
+  &__container {
+    height: 294px;
+    width: 370px;
+    overflow: hidden;
+    position: relative;
+    image {
+      font-size: 0;
+    }
+  }
+  &__image-overlay {
+    background-color: rgba(33, 150, 243, 0.9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: translateY, $animationTime;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    padding: 49px 45px 49px 24px;
+    text-justify: left;
+    color: $white;
+  }
+  figure {
+    padding: 0;
+    margin: 0;
+  }
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+  }
+  &__image-caption {
+    padding: 2px 0;
+    font-size: 18px;
+    line-height: 1.71;
+    font-weight: 700;
+    &--smaller {
+      color: $textLightColor;
+      line-height: 1.6;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}

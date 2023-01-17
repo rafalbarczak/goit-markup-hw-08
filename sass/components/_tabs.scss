@@ -1,0 +1,25 @@
+.tabs {
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+  }
+  &__icon {
+    padding: 15px 31px;
+    display: inline-block;
+    fill: $icons;
+    border: $icons 1px solid;
+    border-radius: 4px;
+    height: 92px;
+    width: 170px;
+    transition: border $animationTime, fill $animationTime;
+    &:hover,
+    &:focus {
+      border: $secondaryColor 1px solid;
+      fill: $secondaryColor;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity $animationTime, visibility $animationTime;
+}
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity $animationTime;
+  &.is-hidden .modal {
+    transform: scale(0);
+  }
+}
+.modal {
+  background-color: $white;
+  margin: auto;
+  width: 528px;
+  height: 581px;
+  position: relative;
+  transition: transform $animationTime;
+  text-align: center;
+  padding-top: 40px;
+  &__close-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 8px;
+    right: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $white;
+    cursor: pointer;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  button[type="submit"] {
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    background-color: $secondaryColor;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+  &__text {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+  }
+  &__svg {
+    position: relative;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    &:focus-within svg {
+      fill: $secondaryColor;
+    }
+    & svg {
+      position: absolute;
+      left: 12px;
+      top: 11px;
+      transition: fill $animationTime;
+    }
+  }
+  &__input {
+    width: 448px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    padding: 0 16px 0 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color $animationTime;
+    &:focus {
+      outline: none;
+      border-color: $secondaryColor;
+    }
+    &--comment {
+      resize: none;
+      height: 120px;
+      margin-top: 4px;
+      margin-bottom: 20px;
+      padding-top: 12px;
+      padding-left: 16px;
+      &::placeholder {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+      }
+    }
+  }
+}
+.modal-checkbox {
+  display: flex;
+  gap: 8px;
+  margin-left: 15px;
+  position: relative;
+  align-items: center;
+  &__input {
+    appearance: none;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $textDarkerColor;
+    border-radius: 2px;
+    z-index: 2;
+    transition: opacity $animationTime;
+    &:checked + .modal-checkbox__custom {
+      opacity: 1;
+    }
+    &:checked {
+      opacity: 0;
+    }
+  }
+  &__custom {
+    position: absolute;
+    left: 0;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity $animationTime;
+    background-color: $secondaryColor;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    a {
+      color: $secondaryColor;
+    }
+  }
+}

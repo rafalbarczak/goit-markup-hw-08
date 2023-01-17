@@ -1,0 +1,59 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: $fontFamily;
+  color: $textDarkerColor;
+}
+.header-border {
+  border-bottom: 1px solid $portfolioBorder;
+  padding: 24px 0 25px;
+  position: relative;
+}
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 15px;
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--negative-margin {
+    margin-top: -94px;
+  }
+  &--footer {
+    display: flex;
+    gap: 70px;
+  }
+}
+.section {
+  padding: 94px 0;
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    vertical-align: top;
+    margin-bottom: 10px;
+  }
+}
+.page-section__background {
+  margin: 0 auto;
+  min-width: 1200px;
+  &--dark {
+    background-color: $backgroundColor;
+  }
+  &--grey {
+    background-color: $primaryColor;
+  }
+}
