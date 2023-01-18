@@ -2,24 +2,44 @@
   &__list {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin: 0;
     padding: 0;
-    padding-top: 40px;
+    padding-top: 20px;
   }
   &__icon {
-    padding: 15px 31px;
+    padding: 16px 52px;
     display: inline-block;
     fill: $icons;
     border: $icons 1px solid;
     border-radius: 4px;
     height: 92px;
-    width: 170px;
+    width: 210px;
     transition: border $animationTime, fill $animationTime;
     &:hover,
     &:focus {
       border: $secondaryColor 1px solid;
       fill: $secondaryColor;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .tabs {
+    &__icon {
+      padding: 16px 60px;
+      width: 226px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tabs {
+    &__list {
+      padding-top: 40px;
+    }
+    &__icon {
+      padding: 15px 31px;
+      width: 170px;
     }
   }
 }

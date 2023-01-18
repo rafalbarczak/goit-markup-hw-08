@@ -21,8 +21,8 @@
 .modal {
   background-color: $white;
   margin: auto;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   position: relative;
   transition: transform $animationTime;
   text-align: center;
@@ -39,6 +39,10 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: $white;
     cursor: pointer;
+    &:hover,
+    &:focus {
+      fill: $secondaryColor;
+    }
   }
   &__text {
     font-weight: 700;
@@ -71,6 +75,7 @@
   margin-left: 40px;
   &__text {
     font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.01em;
   }
   &__svg {
@@ -80,7 +85,7 @@
     &:focus-within svg {
       fill: $secondaryColor;
     }
-    & svg {
+    svg {
       position: absolute;
       left: 12px;
       top: 11px;
@@ -88,7 +93,7 @@
     }
   }
   &__input {
-    width: 448px;
+    width: 370px;
     height: 40px;
     display: inline-block;
     position: relative;
@@ -119,7 +124,6 @@
 .modal-checkbox {
   display: flex;
   gap: 8px;
-  margin-left: 15px;
   position: relative;
   align-items: center;
   &__input {
@@ -146,11 +150,27 @@
     background-color: $secondaryColor;
   }
   &__text {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     a {
       color: $secondaryColor;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+  .modal-form__input {
+    width: 448px;
+  }
+  .modal-checkbox {
+    margin-left: 15px;
+    &__text {
+      font-size: 14px;
+      line-height: 1.71;
     }
   }
 }
