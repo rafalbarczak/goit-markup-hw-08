@@ -1,0 +1,123 @@
+@media screen and (min-width: 768px) {
+  .mobile-header {
+    display: none;
+  }
+  .menu-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .main-nav__logo--black {
+      color: $textDarkerColor;
+      margin: 0;
+    }
+  }
+  .menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    transition: color $animationTime;
+    &:hover,
+    &:focus {
+      color: $secondaryColor;
+    }
+  }
+  .mobile-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+    &__wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      justify-content: space-between;
+      .menu-toggle {
+        margin: -38px -25px 0 0;
+      }
+    }
+    &__link {
+      text-decoration: none;
+      color: $textDarkerColor;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 47px;
+      letter-spacing: 0.02em;
+      font-family: $fontFamily;
+      transition: color $animationTime;
+      &:hover,
+      &:focus {
+        color: $secondaryColor;
+      }
+    }
+    &__number {
+      display: inline-block;
+      font-family: $fontFamily;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+      color: $secondaryColor;
+      margin-top: 302px;
+      text-decoration: none;
+    }
+    &__mail {
+      display: block;
+      font-family: $fontFamily;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      color: $textLightColor;
+      margin-top: 32px;
+      text-decoration: none;
+    }
+    &__socials {
+      display: flex;
+      list-style: none;
+      gap: 10px;
+      margin-top: 64px;
+    }
+    &__item {
+      padding-right: 10px;
+      color: $secondaryColor;
+      font-family: $fontFamily;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    padding: 48px 40px;
+    background-color: $white;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: transform $animationTime;
+    &.is-open {
+      display: block;
+      transform: translateX(0);
+    }
+  }
+}
