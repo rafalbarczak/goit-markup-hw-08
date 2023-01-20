@@ -51,6 +51,11 @@
         margin: -38px -25px 0 0;
       }
     }
+    &__flex {
+      display: flex;
+      flex-direction: column;
+      gap: 302px;
+    }
     &__link {
       text-decoration: none;
       color: $textDarkerColor;
@@ -73,7 +78,6 @@
       line-height: 40px;
       letter-spacing: 0.02em;
       color: $secondaryColor;
-      margin-top: 302px;
       text-decoration: none;
     }
     &__mail {
@@ -89,6 +93,7 @@
     }
     &__socials {
       display: flex;
+      flex-wrap: wrap;
       list-style: none;
       gap: 10px;
       margin-top: 64px;
