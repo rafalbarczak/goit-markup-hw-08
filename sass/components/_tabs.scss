@@ -24,7 +24,7 @@
     }
   }
 }
-@media screen and (min-width: 768px) {
+@include tablet {
   .tabs {
     &__icon {
       padding: 16px 60px;
@@ -32,7 +32,7 @@
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@include desktop {
   .tabs {
     &__list {
       padding-top: 40px;

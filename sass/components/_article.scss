@@ -34,7 +34,7 @@
 .photo {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@include tablet {
   .article {
     flex-direction: row;
     flex-wrap: wrap;
@@ -46,7 +46,7 @@
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@include desktop {
   .article {
     article {
       width: 270px;

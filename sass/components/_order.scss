@@ -44,7 +44,7 @@
     margin-bottom: 58px;
   }
 }
-@media screen and (min-width: 768px) {
+@include tablet {
   .order {
     &__background {
       background: linear-gradient(#2f303a66, #2f303a66),
@@ -65,7 +65,7 @@
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@include desktop {
   .order {
     &__background {
       background: linear-gradient(#2f303a66, #2f303a66),

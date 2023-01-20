@@ -107,7 +107,7 @@
     }
   }
 }
-@media screen and (min-width: 768px) {
+@include tablet {
   .footer {
     &__box {
       display: inline-flex;
@@ -130,7 +130,7 @@
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@include desktop {
   .footer {
     &__box {
       display: flex;
