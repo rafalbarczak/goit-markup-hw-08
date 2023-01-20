@@ -3,6 +3,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin: 0;
     padding: 0;
@@ -12,6 +13,7 @@
     padding: 16px 52px;
     display: inline-block;
     fill: $icons;
+    margin: auto;
     border: $icons 1px solid;
     border-radius: 4px;
     height: 92px;
