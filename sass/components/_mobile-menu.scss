@@ -113,11 +113,15 @@
     padding: 48px 40px;
     background-color: $white;
     z-index: 2;
+    opacity: 0;
+    pointer-events: none;
     transform: translateX(100%);
     transition: transform $animationTime;
     &.is-open {
       display: block;
       transform: translateX(0);
+      opacity: 1;
+      pointer-events: all;
     }
   }
 }
